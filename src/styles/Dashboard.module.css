@@ -1,11 +1,25 @@
 .dashboardWrapper {
   margin-top: 10px;
-  min-height: 95vh;
+  min-height: 100vh;
   background-image: url('https://img.myloview.com/stickers/topographic-map-contour-background-contour-map-vector-map-line-of-topography-vector-abstract-topographic-map-concept-with-space-for-your-copy-wavy-banners-color-geometric-form-700-227924193.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+.flexDashboard {
+  display: flex;
+  justify-content: center;
+}
+
+.marginTen {
+  margin: 10px;
+}
+
+.loaderWrapper {
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 @media (max-width: 600px) {

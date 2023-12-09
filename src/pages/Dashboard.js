@@ -73,12 +73,9 @@ const Dashboard = () => {
     <div className={styles.dashboardWrapper}>
       {isLoading ? (
         <div
-          style={{
-            marginBottom: '10px',
-            textAlign: 'center',
-          }}
+          className={styles.loaderWrapper}
         >
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div className={styles.flexDashboard}>
             <ThreeDots
               height='80'
               width='80'
@@ -97,11 +94,7 @@ const Dashboard = () => {
       ) : (
         <>
           <div
-            style={{
-              marginBottom: '10px',
-              display: 'flex',
-              justifyContent: 'center'
-            }}
+            className={`${styles.flexDashboard} ${styles.marginTen}`}
           >
             <Button
               variant='contained'

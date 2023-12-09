@@ -1,0 +1,25 @@
+.footerWrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.flexFooter {
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+  padding: 10px;
+}
+
+.item {
+  margin: 10px;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+
+  .flexFooter {
+    display: block;
+    text-align: center;
+  }
+}

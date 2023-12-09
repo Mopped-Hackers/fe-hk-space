@@ -11,3 +11,37 @@
 .buttons button {
   margin: 5px;
 }
+
+.black {
+  background-color: black;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+/* Add this class for circular shape */
+.circle {
+  width: 10px; /* Adjust the size as needed */
+  height: 10px; /* Adjust the size as needed */
+  border-radius: 50%;
+  margin-right: 5px; /* Optional: Add margin for spacing between circles and labels */
+  display: inline-block;
+}
+
+.legends {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center; /* Optional: Align items vertically in the center */
+  margin-right: 10px; /* Optional: Add some margin to the right */
+}
+

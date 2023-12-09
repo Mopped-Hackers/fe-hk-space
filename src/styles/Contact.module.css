@@ -6,7 +6,7 @@
   margin-top: 20px;
   flex-wrap: wrap;
   max-width: 720px;
-  height: auto;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -19,7 +19,7 @@
 
 .content a {
   text-decoration: none;
-  color: blue;
+  color: black;
 }
 
 .profile {

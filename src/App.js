@@ -5,6 +5,7 @@ import "./App.css";
 import { ABOUT, CONTACT, DEMO } from './constants';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -48,6 +49,7 @@ function App() {
       {isActive.demo && <Dashboard />}
       {isActive.about && <About />}
       {isActive.contact && <Contact />}
+      <Footer />
     </div>
   )
 }
