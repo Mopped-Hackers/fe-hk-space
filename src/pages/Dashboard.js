@@ -2,7 +2,7 @@ import React from 'react'
 import Map from '../components/map/Map'
 import { Button } from '@mui/material'
 import html2canvas from 'html2canvas'
-import { ACCESS_TOKEN, LAT, LONG, MAP_STYLE, DEFAULT_ZOOM } from '../constants'
+import { ACCESS_TOKEN, LAT, LONG, MAP_STYLE, DEFAULT_ZOOM, BACKEND_URL } from '../constants'
 import { enqueueSnackbar } from 'notistack'
 import styles from '../styles/Dashboard.module.css'
 import { ThreeDots } from 'react-loader-spinner'
@@ -36,7 +36,7 @@ const Dashboard = () => {
         reader.readAsDataURL(blob)
       })
 
-      const res = await fetch('http://localhost:3001/images/upload', {
+      const res = await fetch(`${BACKEND_URL}/images/upload`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
