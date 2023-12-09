@@ -1,0 +1,13 @@
+.modalWrapper {
+    border-radius: 0px 5px!important;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.buttons button {
+  margin: 5px;
+}

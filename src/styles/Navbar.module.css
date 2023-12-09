@@ -1,0 +1,92 @@
+.container {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.logo {
+  height: 300px;
+  width: 100%;
+  object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem; /* Adjust padding as needed */
+  color: white;
+  font-size: xx-large;
+}
+
+.overlayCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 1rem; /* Adjust padding as needed */
+  color: white;
+  font-size: xx-large;
+  transform: translate(-50%, -50%);
+  height: 200px;
+}
+
+.overlay p {
+  margin: 0;
+  font-family: "DIN Alternate";
+  font-weight: normal;
+  margin-top: -10px;
+}
+
+.overlayCenter p {
+  font-family: "DIN Alternate";
+  font-weight: normal;
+  margin-top: -30px;
+  font-size: 120px;
+  /* border-bottom: 5px solid blue; */
+}
+
+.line {
+  width: 50px;
+  height: 5px;
+  background-color: blue;
+  margin-top: -135px;
+  border-color: blue;
+}
+
+.tabs {
+  color: white;
+  font-weight: bold;
+  top: 85%;
+  position: absolute;
+  width: 33%;
+  min-width: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.tabs a {
+  cursor: pointer;
+}
+
+.active {
+  border-bottom: 2px solid blue;
+}
+
+@media (max-width: 800px) {
+  .tabs {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+
+  .logo {
+    min-height: 100vh; /* Change from 300px to 100% */
+    width: 100%;
+    object-fit: cover;
+  }
+}

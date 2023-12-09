@@ -1,0 +1,66 @@
+.contactWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  top: 0;
+  margin: 0 auto;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  max-width: 720px;
+  height: auto;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: column; /* Stack the items vertically on small screens */
+  align-items: center;
+  text-align: left; /* Center text on small screens */
+}
+
+.content a {
+  text-decoration: none;
+  color: blue;
+}
+
+.profile {
+  width: 300px;
+  height: auto; /* Make the height auto to maintain aspect ratio */
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+}
+
+.text {
+  margin-top: 20px; /* Add spacing between image and text */
+}
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+  margin-top: -10px; /* Add some top margin to the social media icons */
+}
+
+.iconWrapper {
+  margin-left: 10px; /* Add spacing between text and social media icon */
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+@media (min-width: 651px) {
+  .content {
+    margin: 5px;
+    flex-direction: row; /* Keep items side by side on larger screens */
+    align-items: flex-start; /* Align items at the start of the flex container */
+  }
+
+  .text {
+    margin-top: 0; /* Remove the top margin for text */
+    margin-left: 20px;
+  }
+
+  .socialMedia {
+    margin-top: -10px; /* Remove the top margin for social media icons */
+  }
+}
