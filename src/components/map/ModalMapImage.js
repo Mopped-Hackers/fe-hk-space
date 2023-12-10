@@ -83,7 +83,11 @@ const ModalMapImage = props => {
             </div>
             <div className={styles.legendItem}>
               <div className={`${styles.green} ${styles.circle}`}></div>
-              <div className={styles.label}>plants</div>
+              <div className={styles.label}>forest</div>
+            </div>
+            <div className={styles.legendItem}>
+              <div className={`${styles.yellow} ${styles.circle}`}></div>
+              <div className={styles.label}>lines</div>
             </div>
           </div>
           <div className={styles.buttons}>

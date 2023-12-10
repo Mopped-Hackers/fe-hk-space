@@ -1,3 +1,16 @@
 body {
   margin: 0;
 }
+
+.mapboxgl-ctrl-scale {
+  bottom: 70px; /* Adjust the position of the scale control */
+  left: 10px; /* Adjust the position of the scale control */
+}
+
+div[mapboxgl-children] {
+  display: none !important;
+}
+
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+  display: none !important;
+}

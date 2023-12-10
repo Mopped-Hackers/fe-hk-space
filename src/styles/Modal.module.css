@@ -13,15 +13,19 @@
 }
 
 .black {
-  background-color: black;
+  background-color: rgb(154, 153, 123);
 }
 
 .blue {
-  background-color: blue;
+  background-color: rgb(9, 152, 217);
 }
 
 .green {
-  background-color: green;
+  background-color: rgb(15, 71, 11);
+}
+
+.yellow {
+  background-color: rgb(255, 255, 0);
 }
 
 /* Add this class for circular shape */

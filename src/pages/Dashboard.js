@@ -7,6 +7,7 @@ import { enqueueSnackbar } from 'notistack'
 import styles from '../styles/Dashboard.module.css'
 import { ThreeDots } from 'react-loader-spinner'
 import ModalMapImage from '../components/map/ModalMapImage'
+const timeout = 5 * 60 * 1000; // 5 minutes
 
 const Dashboard = () => {
   const [longitude, setLongitude] = React.useState(LONG)
@@ -16,15 +17,18 @@ const Dashboard = () => {
   const [open, setOpen] = React.useState(false)
   const [resImage, setImage] = React.useState('')
 
+  const timeoutPromise = new Promise((_, reject) =>
+    setTimeout(() => reject(new Error('Request timeout')), timeout)
+  );
+
   const screenshotHandler = async () => {
     setIsLoading(true)
-    const mapDiv = document.getElementById('map')
-    const width = mapDiv.offsetWidth < 400 ? 400 : mapDiv.offsetWidth
-    const height = mapDiv.offsetHeight < 400 ? 400 : mapDiv.offsetHeight
+    const width = 700
+    const height = 700
     const apiUrl = `https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v12/static/${longitude},${latitude},${zoom},0,0/${width}x${height}?access_token=${ACCESS_TOKEN}`
     try {
-      const response = await fetch(apiUrl)
-
+      const fetchPromise = fetch(apiUrl);
+      const response = await Promise.race([fetchPromise, timeoutPromise]);
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`)
       }
